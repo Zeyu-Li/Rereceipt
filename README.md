@@ -6,6 +6,14 @@ Figma: https://www.figma.com/file/E0aiQ9GR3Ih8GUPnLRbqzD/HackED2022?node-id=0%3A
 
 Jira/GitHub Board: https://github.com/users/Zeyu-Li/projects/16
 
+## Run
+
+1. Do `npm install` to install dependencies
+2. `npm start` to run
+3. Do development on web browser
+
+
+
 ## Packages
 
 * React native
