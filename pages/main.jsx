@@ -5,7 +5,7 @@ import { Button } from "../components/button";
 export const Main = () => {
   return (
     <>
-      <Text>Main</Text>
+      <Text>Main 30</Text>
       <Button />
     </>
   );
