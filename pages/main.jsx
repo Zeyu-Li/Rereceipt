@@ -24,20 +24,20 @@ export const Main = () => {
             <Text style={[styles.dataCell, { display: "inline" }]}>
               Total: ${total.toFixed(2)}
             </Text>
-            <Text style={[styles.dataCell, { display: "inline" }]}>
-              Monthly Breakdown
-            </Text>
           </View>
         </CenterContainer>
       </FancyContainer>
       <GeneralContainer>
-        <Text style={styles.dataCell}>Search bar</Text>
+        <Text style={[styles.dataCell]}>Search bar</Text>
       </GeneralContainer>
       <GeneralContainer>
         <CenterContainer>
           <OverviewTable />
         </CenterContainer>
       </GeneralContainer>
+
+      {/* extra space for plus button */}
+      <View style={{ height: 20 }} />
 
       <PlusButton />
 
