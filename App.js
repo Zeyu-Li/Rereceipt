@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Main } from "./pages/main";
 import { primary, text } from "./styles/colors";
 
@@ -9,9 +9,6 @@ export default function App() {
       {/* <Text>Open up App.js to start working on your app!</Text> */}
       <Main />
       <StatusBar style="auto" />
-      <div className="App">
-        <SearchBar placeholder="Search here" data={UserData} />
-      </div>
     </View>
   );
 }
@@ -22,5 +19,6 @@ const styles = StyleSheet.create({
     backgroundColor: primary,
     color: text,
     alignItems: "center",
+    padding: 35,
   },
 });
