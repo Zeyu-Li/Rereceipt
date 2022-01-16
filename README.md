@@ -22,7 +22,8 @@ Jira/GitHub Board: https://github.com/users/Zeyu-Li/projects/16
 * React native
 * React native nav
 * React native tailwind
-* 
+
+
 
 ## Team
 
