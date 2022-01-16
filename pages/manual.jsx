@@ -11,8 +11,9 @@ export const Manual = ({ setManualPage }) => {
 
   const submit = () => {
     // check that all data is entered and valid
-    if (store.length != 0) {
-
+    if (store == '' || price == '' || isNaN(price)) {
+      alert('Invalid input!')
+      return;
     }
     // submit data here
     console.log("submitted");
@@ -20,6 +21,9 @@ export const Manual = ({ setManualPage }) => {
     setManualPage(false);
   };
 
+  const cancel = () => {
+    setManualPage(false);
+  }
   return (
     <>
       <Text style={styles.dataHeader}>Enter Receipt Info</Text>
@@ -38,7 +42,7 @@ export const Manual = ({ setManualPage }) => {
         <Text style={styles.textStyle}>Submit</Text>
       </Pressable>
 
-      <Pressable style={[styles.button_cancel, styles.buttonClose]} onPress={submit}>
+      <Pressable style={[styles.button_cancel, styles.buttonClose]} onPress={cancel}>
         <Text style={styles.textStyle}>Cancel</Text>
       </Pressable>
     </>
