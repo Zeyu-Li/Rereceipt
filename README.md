@@ -9,8 +9,9 @@ Jira/GitHub Board: https://github.com/users/Zeyu-Li/projects/16
 ## Run
 
 1. Do `npm install` to install dependencies
-2. `npm start` to run
-3. Do development on web browser
+2. `sudo npm install -g expo-cli`
+3. `npm start` to run
+4. Do development on web browser
 
 
 
@@ -23,7 +24,8 @@ Jira/GitHub Board: https://github.com/users/Zeyu-Li/projects/16
 
 ## Team
 
-* Andrew Li - Tech lead
+* Andrew Li - Tech lead, UI/UX
+* 
 
 
 
