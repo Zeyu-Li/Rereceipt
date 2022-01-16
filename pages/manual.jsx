@@ -37,6 +37,10 @@ export const Manual = ({ setManualPage }) => {
       <Pressable style={[styles.button, styles.buttonClose]} onPress={submit}>
         <Text style={styles.textStyle}>Submit</Text>
       </Pressable>
+
+      <Pressable style={[styles.button_cancel, styles.buttonClose]} onPress={submit}>
+        <Text style={styles.textStyle}>Cancel</Text>
+      </Pressable>
     </>
   );
 };

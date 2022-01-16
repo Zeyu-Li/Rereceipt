@@ -69,6 +69,19 @@ const styles = StyleSheet.create({
     alignContent: "flex-end",
     justifyContent: "flex-end",
     width: "100%",
+    marginTop: 10
+  },
+  button_cancel: {
+    borderRadius: 20,
+    padding: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
+    elevation: 2,
+    display: "flex",
+    alignContent: "flex-end",
+    justifyContent: "flex-end",
+    width: "100%",
+    marginTop:20
   },
   buttonOpen: {
     backgroundColor: "#2196F3",
