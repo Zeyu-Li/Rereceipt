@@ -1,19 +1,21 @@
-import React, { useState} from "react";
-import {Modal, View, StyleSheet, TouchableOpacity, Alert, Pressable, Text} from "react-native";
+import React, { useState } from "react";
+import {
+  Modal,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Alert,
+  Pressable,
+  Text,
+} from "react-native";
+import { Button, Portal } from "react-native-paper";
+import { CenterContainer } from "../containers/GeneralContainer";
 
-export const App = () => {
+export const PlusButton = () => {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <View style={styles.centeredView}>
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
-          setModalVisible(!modalVisible);
-        }}
-      >
+      <Modal animationType="slide" transparent={true} visible={modalVisible}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <Text style={styles.modalText}>Choose From Gallery</Text>
@@ -32,29 +34,35 @@ export const App = () => {
         style={[styles2.plus, styles.buttonOpen]}
         onPress={() => setModalVisible(true)}
       >
-        <Text style={styles.textStyle1}>+</Text>
+        <CenterContainer>
+          <Button onPress={() => setModalVisible(true)}>
+            <Text style={[styles.textStyle1, styles.centeredView]}>+</Text>
+          </Button>
+        </CenterContainer>
       </Pressable>
     </View>
   );
 };
 
-export const ButtonWithStyle = ({children}) => {
-  const onPress = () => alert('you pressed');
-  return <TouchableOpacity onPress={onPress} style={styles2.plus}>{children}</TouchableOpacity>;
-
+export const ButtonWithStyle = ({ children }) => {
+  const onPress = () => alert("you pressed");
+  return (
+    <TouchableOpacity onPress={onPress} style={styles2.plus}>
+      {children}
+    </TouchableOpacity>
+  );
 };
-
 
 const styles2 = StyleSheet.create({
   plus: {
-    alignItems: 'center',
     height: 80,
     width: 80,
     borderRadius: 40,
-    marginTop: 450,
-    marginRight:-210
-  }
-
+    position: "fixed",
+    right: 0,
+    bottom: 0,
+    margin: 20,
+  },
 });
 
 const styles = StyleSheet.create({
@@ -62,7 +70,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 22
   },
   modalView: {
     margin: 20,
@@ -73,11 +80,11 @@ const styles = StyleSheet.create({
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
-      height: 2
+      height: 2,
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,
-    elevation: 5
+    elevation: 5,
   },
   button: {
     borderRadius: 25,
@@ -93,17 +100,17 @@ const styles = StyleSheet.create({
   textStyle: {
     color: "white",
     fontWeight: "bold",
-    textAlign: "center"
+    textAlign: "center",
+    textAlignVertical: "top",
   },
   textStyle1: {
     color: "white",
     fontWeight: "bold",
     textAlign: "center",
-    fontSize: 60, 
-    textAlign: 'center'
+    fontSize: 60,
   },
   modalText: {
     marginBottom: 15,
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 });

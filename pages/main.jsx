@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, View } from "react-native";
 import { Chart } from "../components/chart";
-import { ButtonWithStyle, App } from "../components/common/button";
+import { ButtonWithStyle, PlusButton } from "../components/common/button";
 import { OverviewTable } from "../components/common/Table";
 import {
   CenterContainer,
@@ -39,7 +39,7 @@ export const Main = () => {
         </CenterContainer>
       </GeneralContainer>
 
-      <App></App>
+      <PlusButton />
 
       {/* <ButtonWithStyle>
         <Text style={{fontSize:60, textAlign: 'center', fontWeight: 'bold', color:'white'}}>+</Text>
