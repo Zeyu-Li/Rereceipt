@@ -69,7 +69,7 @@ export const OverviewTable = () => {
             <DataTable.Cell numeric>
               <Text style={styles.dataCell}>{`${
                 months[item[1].getMonth()]
-              } ${item[1].getDay()}`}</Text>
+              } ${item[1].getDate()}`}</Text>
             </DataTable.Cell>
             <DataTable.Cell numeric>
               <Text style={styles.dataCell}>${item[2].toFixed(2)}</Text>
