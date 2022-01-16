@@ -24,7 +24,7 @@ export const Main = () => {
               Total: ${total.toFixed(2)}
             </Text>
             <Text style={[styles.dataCell, { display: "inline" }]}>
-              Breakdown
+              Monthly Breakdown
             </Text>
           </View>
         </CenterContainer>
