@@ -1,89 +1,31 @@
-import React, { useState } from "react";
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  TextInput,
-} from "react-native";
-import SearchBar from "./SearchBar/SearchBar";
+import { StatusBar } from "expo-status-bar";
+import { View } from "react-native";
+import { Main } from "./pages/main";
+import { Provider as PaperProvider, DefaultTheme } from "react-native-paper";
+import styles from "./styles/styles";
+import { primary, secondary } from "./styles/colors";
+
+const theme = {
+  ...DefaultTheme,
+  roundness: 2,
+  colors: {
+    ...DefaultTheme.colors,
+    primary,
+    accent: secondary,
+  },
+};
+
 export default function App() {
-  const [data] = useState([
-    ["Superstore"],
-    "puma",
-    "McDonalds",
-    "Walmart",
-    "shopping",
-    "grocery",
-    "fitness",
-    "health",
-    "01/15/2022",
-    "yoyo",
-  ]);
-
-  const [filtered, setFiltered] = useState(data);
-  const [searching, setSearching] = useState(false);
-  const onSearch = (text) => {
-    if (text) {
-      setSearching(true);
-      const temp = text.toLowerCase();
-
-      const tempList = data.filter((item) => {
-        if (item.match(temp)) return item;
-      });
-      setFiltered(tempList);
-    } else {
-      setSearching(false);
-      setFiltered(data);
-    }
+  const getPage = () => {
+    return <Main />;
   };
+
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.textInput}
-        placeholder="Search"
-        placeholderTextColor="white"
-        onChangeText={onSearch}
-      />
-      <View
-        style={{
-          justifyContent: "center",
-          alignContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <View
-          style={{
-            flexWrap: "wrap",
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        ></View>
-      </View>
+      {/* <Text>Open up App.js to start working on your app!</Text> */}
+      <PaperProvider theme={theme}>{getPage()}</PaperProvider>
 
-      {searching && (
-        <SearchBar onPress={() => setSearching(false)} dataSource={filtered} />
-      )}
+      <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    // justifyContent: 'center',
-    alignItems: "center",
-    marginTop: "20%",
-    flex: 1,
-    backgroundColor: "#A9A9A9",
-  },
-  textInput: {
-    backgroundColor: "#A9A9A9",
-    width: "80%",
-    borderRadius: 5,
-    height: 50,
-    fontSize: 20,
-    fontWeight: "bold",
-    paddingHorizontal: 10,
-  },
-});
