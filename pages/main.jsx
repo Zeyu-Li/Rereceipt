@@ -9,13 +9,18 @@ import {
   GeneralContainer,
 } from "../components/containers/GeneralContainer";
 import styles from "../styles/styles";
+import { Manual } from "./manual";
 
-export const Main = () => {
+export const Main = ({ navigation }) => {
   // amount of money
   const [total, setTotal] = useState(100);
+  const [manualPage, setManualPage] = useState(false);
 
+  if (manualPage) {
+    return <Manual setManualPage={setManualPage} />;
+  }
   return (
-    <>
+    <View style={{ flex: 1 }}>
       <FancyContainer>
         <CenterContainer>
           {/* Chart */}
@@ -39,11 +44,11 @@ export const Main = () => {
       {/* extra space for plus button */}
       <View style={{ height: 20 }} />
 
-      <PlusButton />
+      <PlusButton setManualPage={setManualPage} />
 
       {/* <ButtonWithStyle>
         <Text style={{fontSize:60, textAlign: 'center', fontWeight: 'bold', color:'white'}}>+</Text>
       </ButtonWithStyle>  */}
-    </>
+    </View>
   );
 };

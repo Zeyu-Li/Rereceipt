@@ -37,6 +37,62 @@ const styles = StyleSheet.create({
   dataCell: {
     color: text,
   },
+  // buttons
+
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  button: {
+    borderRadius: 20,
+    padding: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
+    elevation: 2,
+    display: "flex",
+    alignContent: "flex-end",
+    justifyContent: "flex-end",
+    width: "100%",
+  },
+  buttonOpen: {
+    backgroundColor: "#2196F3",
+  },
+  buttonClose: {
+    backgroundColor: "#F194FF",
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
+    textAlignVertical: "top",
+  },
+  textStyle1: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
+    fontSize: 60,
+  },
+  modalText: {
+    marginBottom: 15,
+    fontSize: 20,
+    textAlign: "center",
+  },
 });
 
 export default styles;
