@@ -17,12 +17,19 @@ Jira/GitHub Board: https://github.com/users/Zeyu-Li/projects/16
 
 
 
+## Screenshot
+
+![screenshot](screenshot.png)
+
+
+
 ## Packages
 
 * React native
 * React native nav
 * React native tailwind
-* 
+
+
 
 ## Team
 
