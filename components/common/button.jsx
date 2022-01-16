@@ -11,7 +11,7 @@ import {
 import { Button, Portal, RadioButton } from "react-native-paper";
 import { CenterContainer } from "../containers/GeneralContainer";
 
-export const PlusButton = () => {
+export const PlusButton = ({ setManualPage }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const changeSelection = (selection) => {
@@ -21,6 +21,7 @@ export const PlusButton = () => {
       console.log("file clicked");
     } else {
       console.log("manual clicked");
+      setManualPage(true);
     }
     setModalVisible(false);
   };
