@@ -16,11 +16,7 @@ export const PlusButton = ({ setManualPage }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const changeSelection = (selection) => {
-    if (selection === "camera") {
-      console.log("Camera clicked");
-    } else if (selection === "file") {
-      console.log("file clicked");
-    } else {
+    if (selection === "manual") {
       console.log("manual clicked");
       setManualPage(true);
     }
@@ -36,6 +32,7 @@ export const PlusButton = ({ setManualPage }) => {
             <RadioButton.Group
               onValueChange={(value) => changeSelection(value)}
             >
+              {/*
               <RadioButton.Item
                 style={styles.modalText}
                 label="Camera"
@@ -45,7 +42,7 @@ export const PlusButton = ({ setManualPage }) => {
                 style={styles.modalText}
                 label="Upload File"
                 value="file"
-              />
+              /> */}
               <RadioButton.Item
                 style={styles.modalText}
                 label="Manual Entry"

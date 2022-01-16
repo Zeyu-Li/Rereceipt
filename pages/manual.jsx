@@ -6,7 +6,7 @@ import styles from "../styles/styles";
 export const Manual = ({ setManualPage }) => {
   const [item, setItem] = useState("");
   const [price, setPrice] = useState("");
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(new Date().toDateString());
 
   const submit = () => {
     // submit data here
@@ -17,16 +17,16 @@ export const Manual = ({ setManualPage }) => {
 
   return (
     <>
-      <Text style={styles.dataHeader}>Enter Item</Text>
-      <TextInput label="Name" value={item} onChangeText={(e) => setItem(e)} />
+      <Text style={styles.dataHeader}>Enter Receipt Info</Text>
+      <TextInput label="Store Name" value={item} onChangeText={(e) => setItem(e)} />
       <TextInput
-        label="Price"
+        label="Total Cost"
         value={price}
         onChangeText={(e) => setPrice(e)}
       />
       <TextInput
         label="Date"
-        value={"Today"}
+        value={date}
         onChangeText={(e) => setDate(e)}
       />
       <Pressable style={[styles.button, styles.buttonClose]} onPress={submit}>
