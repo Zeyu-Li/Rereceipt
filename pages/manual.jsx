@@ -4,11 +4,16 @@ import { Button, Text, TextInput } from "react-native-paper";
 import styles from "../styles/styles";
 
 export const Manual = ({ setManualPage }) => {
-  const [item, setItem] = useState("");
+  const [store, setStore] = useState("");
   const [price, setPrice] = useState("");
   const [date, setDate] = useState(new Date().toDateString());
+  const [label, setLabel] = useState(new Date().toDateString());
 
   const submit = () => {
+    // check that all data is entered and valid
+    if (store.length != 0) {
+
+    }
     // submit data here
     console.log("submitted");
     // if success return
@@ -18,7 +23,7 @@ export const Manual = ({ setManualPage }) => {
   return (
     <>
       <Text style={styles.dataHeader}>Enter Receipt Info</Text>
-      <TextInput label="Store Name" value={item} onChangeText={(e) => setItem(e)} />
+      <TextInput label="Store Name" value={store} onChangeText={(e) => setStore(e)} />
       <TextInput
         label="Total Cost"
         value={price}
