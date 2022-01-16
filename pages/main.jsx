@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Text } from "react-native";
+import { Chart } from "../components/chart";
 import { OverviewTable } from "../components/common/Table";
 import {
   CenterContainer,
@@ -13,13 +14,12 @@ export const Main = () => {
       <FancyContainer>
         <CenterContainer>
           {/* Chart */}
-          <Text>Chart</Text>
+          <Chart />
+          <Text>Total: $100.00</Text>
         </CenterContainer>
       </FancyContainer>
       <GeneralContainer>
-        <CenterContainer>
-          <Text>Search bar</Text>
-        </CenterContainer>
+        <Text>Search bar</Text>
       </GeneralContainer>
       <GeneralContainer>
         <CenterContainer>
