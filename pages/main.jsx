@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, View } from "react-native";
 import { Chart } from "../components/chart";
-import { ButtonWithStyle, PlusButton } from "../components/common/button";
+import { PlusButton } from "../components/common/button";
 import { OverviewTable } from "../components/common/Table";
 import {
   CenterContainer,
@@ -10,6 +10,7 @@ import {
 } from "../components/containers/GeneralContainer";
 import styles from "../styles/styles";
 import { Manual } from "./manual";
+import Search from "../search"
 
 export const Main = ({ navigation }) => {
   // amount of money
@@ -23,7 +24,6 @@ export const Main = ({ navigation }) => {
     <View style={{ flex: 1 }}>
       <FancyContainer>
         <CenterContainer>
-          {/* Chart */}
           <Chart />
           <View>
             <Text style={[styles.dataCell, { display: "inline" }]}>
@@ -34,6 +34,7 @@ export const Main = ({ navigation }) => {
       </FancyContainer>
       <GeneralContainer>
         <Text style={[styles.dataCell]}>Search bar</Text>
+        <Search />
       </GeneralContainer>
       <GeneralContainer>
         <CenterContainer>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   TouchableOpacity,
   StyleSheet,
@@ -7,6 +7,8 @@ import {
   Text,
   TextInput,
 } from "react-native";
+import SearchBar from "./SearchBar/SearchBar"
+
 export default function Search() {
   const [data] = useState([
     ["Superstore"],
