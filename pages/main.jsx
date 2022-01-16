@@ -33,7 +33,6 @@ export const Main = ({ navigation }) => {
         </CenterContainer>
       </FancyContainer>
       <GeneralContainer>
-        <Text style={[styles.dataCell]}>Search bar</Text>
         <Search />
       </GeneralContainer>
       <GeneralContainer>
