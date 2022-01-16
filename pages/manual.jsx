@@ -10,6 +10,10 @@ export const Manual = ({ setManualPage }) => {
 
   const submit = () => {
     // submit data here
+    if (item == '' || price == '' || isNaN(price)) {
+      alert('Invalid Input');
+      return;
+    }
     console.log("submitted");
     // if success return
     setManualPage(false);
