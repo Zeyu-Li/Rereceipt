@@ -4,8 +4,10 @@ import styles from "../../styles/styles";
 
 export const OverviewTable = () => {
   const [sortedData, setSortedData] = useState([
+    ["item 3", new Date(new Date().getDate() + 1), 20.01],
     ["item 1", new Date(), 10.0],
     ["item 2", new Date(), 20.01],
+    ["1item 2", new Date(), 20.01],
   ]);
   const [data, setData] = useState([]);
   const [ascending, setAscending] = useState(true);
@@ -29,7 +31,7 @@ export const OverviewTable = () => {
     // sort by date here
     setData(
       sortedData.sort((a, b) => {
-        return b[0] - a[0];
+        return a[1] - b[1] ?? ("" + a[0].attr).localeCompare(b[0].attr);
       })
     );
   }, []);

@@ -15,6 +15,7 @@ export const FancyContainer = (props) => {
     <LinearGradient
       // Background Linear Gradient
       colors={["#E192D0", "#CA4AAE", "#7B1164"]}
+      locations={[0, 0.74, 1]}
       style={styles.generalContainer}
     >
       {props.children}
