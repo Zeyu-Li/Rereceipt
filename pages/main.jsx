@@ -1,12 +1,32 @@
-import React, { Component} from "react";
-import { render } from "react-dom";
-import { Text, View, Button, StyleSheet } from "react-native";
+import React, { useState } from "react";
+import { Text } from "react-native";
+import { OverviewTable } from "../components/common/Table";
+import {
+  CenterContainer,
+  FancyContainer,
+  GeneralContainer,
+} from "../components/containers/GeneralContainer";
+
 export const Main = () => {
 
     return (
     <>
-      <Text>Main</Text>
-      <Button>+</Button>
+      <FancyContainer>
+        <CenterContainer>
+          {/* Chart */}
+          <Text>Chart</Text>
+        </CenterContainer>
+      </FancyContainer>
+      <GeneralContainer>
+        <CenterContainer>
+          <Text>Search bar</Text>
+        </CenterContainer>
+      </GeneralContainer>
+      <GeneralContainer>
+        <CenterContainer>
+          <OverviewTable />
+        </CenterContainer>
+      </GeneralContainer>
     </>
   );
 
