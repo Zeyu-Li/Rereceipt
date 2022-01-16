@@ -1,5 +1,7 @@
 # Rereceipt
 
+![icon](icon.png)
+
 A receipt app
 
 Figma: https://www.figma.com/file/E0aiQ9GR3Ih8GUPnLRbqzD/HackED2022?node-id=0%3A1
