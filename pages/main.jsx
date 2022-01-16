@@ -17,7 +17,7 @@ export const Main = ({ navigation }) => {
   const [manualPage, setManualPage] = useState(false);
 
   if (manualPage) {
-    return <Manual />;
+    return <Manual setManualPage={setManualPage} />;
   }
   return (
     <View style={{ flex: 1 }}>
