@@ -34,7 +34,10 @@ Jira/GitHub Board: https://github.com/users/Zeyu-Li/projects/16
 ## Team
 
 * Andrew Li - Tech lead, UI/UX
-* 
+* Rachel Ellis
+* Yi Meng Wang
+* Anushka Khare
+* Gokul Sivadasan
 
 
 
