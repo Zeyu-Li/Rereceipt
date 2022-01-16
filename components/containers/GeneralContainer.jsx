@@ -7,7 +7,7 @@ export const GeneralContainer = (props) => {
 };
 
 export const CenterContainer = (props) => {
-  return <View style={styles.center}>{props.children}</View>;
+  return <View style={[styles.center, props.styles]}>{props.children}</View>;
 };
 
 export const FancyContainer = (props) => {
@@ -16,7 +16,7 @@ export const FancyContainer = (props) => {
       // Background Linear Gradient
       colors={["#E192D0", "#CA4AAE", "#7B1164"]}
       locations={[0, 0.74, 1]}
-      style={styles.generalContainer}
+      style={[styles.generalContainer]}
     >
       {props.children}
     </LinearGradient>
