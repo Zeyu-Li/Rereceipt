@@ -9,6 +9,9 @@ export default function App() {
       {/* <Text>Open up App.js to start working on your app!</Text> */}
       <Main />
       <StatusBar style="auto" />
+      <div className="App">
+        <SearchBar placeholder="Search here" data={UserData} />
+      </div>
     </View>
   );
 }
