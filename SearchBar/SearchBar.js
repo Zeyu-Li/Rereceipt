@@ -1,68 +1,82 @@
-import React, { useState } from "react";
-import "./SearchBar.css";
-import SearchIcon from "@material-ui/icons/Search";
-import CloseIcon from "@material-ui/icons/Close";
+import React from "react";
+import {
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  TextInput,
+} from "react-native";
 
-function SearchBar({ placeholder, data }) {
-  const [filteredData, setFilteredData] = useState([]);
-  const [wordEntered, setWordEntered] = useState("");
-
-  const handleFilter = (event) => {
-    const searchWord = event.target.value;
-    setWordEntered(searchWord);
-    const newFilter = data.filter((value) => {
-      if (value.storeName.toLowerCase().includes(searchWord.toLowerCase())) {
-        var returnVal = value.storeName;
-        return returnVal;
-      }
-      if (value.tags.toLowerCase().includes(searchWord.toLowerCase())) {
-        var returnVal = value.tags;
-        return returnVal;
-      }
-      if (value.date.toLowerCase().includes(searchWord.toLowerCase())) {
-        var returnVal = value.date;
-        return returnVal;
-      }
-    });
-
-    if (searchWord === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newFilter);
-    }
-  };
-
-  const clearInput = () => {
-    setFilteredData([]);
-    setWordEntered("");
-  };
-
+export default function SearchBar(props) {
+  const { dataSource } = props;
   return (
-    <div className="search">
-      <div className="searchInputs">
-        <input
-          type="text"
-          placeholder={placeholder}
-          value={wordEntered}
-          onChange={handleFilter}
-        />
-        <div className="searchIcon">
-          {filteredData.length === 0 ? (
-            <SearchIcon />
-          ) : (
-            <CloseIcon id="clearBtn" onClick={clearInput} />
-          )}
-        </div>
-      </div>
-      {filteredData.length != 0 && (
-        <div className="dataResult">
-          {filteredData.slice(0, 15).map((value, key) => {
-            return <p>{value.storeName} </p>;
-          })}
-        </div>
-      )}
-    </div>
+    <TouchableOpacity onPress={props.onPress} style={styles.container}>
+      <View style={styles.subContainer}>
+        {dataSource.length ? (
+          dataSource.map((item) => {
+            return (
+              <View style={styles.itemView}>
+                <Text style={styles.itemText}>{item}</Text>
+              </View>
+            );
+          })
+        ) : (
+          <View style={styles.noResultView}>
+            <Text style={styles.noResultText}>No search items matched</Text>
+          </View>
+        )}
+      </View>
+    </TouchableOpacity>
   );
 }
 
-export default SearchBar;
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#2A2828",
+    position: "absolute",
+    top: "6.2%",
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  subContainer: {
+    backgroundColor: "#2D2327 ",
+    paddingTop: 10,
+    marginHorizontal: 20,
+    borderTopLeftRadius: 4,
+    borderTopRightRadius: 4,
+    flexWrap: "wrap",
+
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center",
+  },
+  itemView: {
+    // marginHorizontal: '10%',
+    backgroundColor: "#F85F9E",
+    height: 30,
+    width: "90%",
+    marginBottom: 10,
+    justifyContent: "center",
+    borderRadius: 4,
+  },
+  itemText: {
+    color: "white",
+    paddingHorizontal: 10,
+  },
+  noResultView: {
+    alignSelf: "center",
+    // margin: 20,
+    height: 100,
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center",
+  },
+  noResultText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "white",
+  },
+});
