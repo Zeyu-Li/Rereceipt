@@ -16,12 +16,14 @@ const theme = {
 };
 
 export default function App() {
+  const getPage = () => {
+    return <Main />;
+  };
+
   return (
     <View style={styles.container}>
       {/* <Text>Open up App.js to start working on your app!</Text> */}
-      <PaperProvider theme={theme}>
-        <Main />
-      </PaperProvider>
+      <PaperProvider theme={theme}>{getPage()}</PaperProvider>
 
       <StatusBar style="auto" />
     </View>
