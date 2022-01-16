@@ -17,9 +17,7 @@ export const Main = () => {
         </CenterContainer>
       </FancyContainer>
       <GeneralContainer>
-        <CenterContainer>
-          <Text>Search bar</Text>
-        </CenterContainer>
+        <Text>Search bar</Text>
       </GeneralContainer>
       <GeneralContainer>
         <CenterContainer>

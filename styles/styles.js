@@ -30,6 +30,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 35,
   },
+  dataHeader: {
+    color: text,
+    fontWeight: "bold",
+  },
+  dataCell: {
+    color: text,
+  },
 });
 
 export default styles;
