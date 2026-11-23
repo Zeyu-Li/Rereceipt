@@ -10,10 +10,11 @@ Jira/GitHub Board: https://github.com/users/Zeyu-Li/projects/16
 
 ## Run
 
-1. Do `npm install` to install dependencies
-2. `sudo npm install -g expo-cli`
-3. `npm start` to run
-4. Do development on web browser
+Requires Node 22.13+ (Node 24 recommended) and [Yarn 1](https://classic.yarnpkg.com/).
+
+1. Do `yarn install` to install dependencies
+2. `yarn start` to run (Expo CLI ships with the `expo` package; no global install needed)
+3. `yarn web` to do development on a web browser
 
 
 
@@ -25,9 +26,9 @@ Jira/GitHub Board: https://github.com/users/Zeyu-Li/projects/16
 
 ## Packages
 
-* React native
-* React native nav
-* React native tailwind
+* React native (Expo)
+* React native paper
+* React native chart kit
 
 
 
