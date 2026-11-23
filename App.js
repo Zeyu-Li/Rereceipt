@@ -1,15 +1,15 @@
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
 import { Main } from "./pages/main";
-import { Provider as PaperProvider, DefaultTheme } from "react-native-paper";
+import { Provider as PaperProvider, MD2LightTheme } from "react-native-paper";
 import styles from "./styles/styles";
 import { primary, secondary } from "./styles/colors";
 
 const theme = {
-  ...DefaultTheme,
+  ...MD2LightTheme,
   roundness: 2,
   colors: {
-    ...DefaultTheme.colors,
+    ...MD2LightTheme.colors,
     primary,
     accent: secondary,
   },
